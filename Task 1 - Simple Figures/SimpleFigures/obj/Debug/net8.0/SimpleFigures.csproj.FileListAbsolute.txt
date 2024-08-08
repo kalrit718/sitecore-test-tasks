@@ -1,0 +1,15 @@
+c:\Kalindu\OheTestProjects\SitecoreTest\sitecore-test-tasks\Task 1 - Simple Figures\SimpleFigures\bin\Debug\net8.0\SimpleFigures.exe
+c:\Kalindu\OheTestProjects\SitecoreTest\sitecore-test-tasks\Task 1 - Simple Figures\SimpleFigures\bin\Debug\net8.0\SimpleFigures.deps.json
+c:\Kalindu\OheTestProjects\SitecoreTest\sitecore-test-tasks\Task 1 - Simple Figures\SimpleFigures\bin\Debug\net8.0\SimpleFigures.runtimeconfig.json
+c:\Kalindu\OheTestProjects\SitecoreTest\sitecore-test-tasks\Task 1 - Simple Figures\SimpleFigures\bin\Debug\net8.0\SimpleFigures.dll
+c:\Kalindu\OheTestProjects\SitecoreTest\sitecore-test-tasks\Task 1 - Simple Figures\SimpleFigures\bin\Debug\net8.0\SimpleFigures.pdb
+c:\Kalindu\OheTestProjects\SitecoreTest\sitecore-test-tasks\Task 1 - Simple Figures\SimpleFigures\obj\Debug\net8.0\SimpleFigures.GeneratedMSBuildEditorConfig.editorconfig
+c:\Kalindu\OheTestProjects\SitecoreTest\sitecore-test-tasks\Task 1 - Simple Figures\SimpleFigures\obj\Debug\net8.0\SimpleFigures.AssemblyInfoInputs.cache
+c:\Kalindu\OheTestProjects\SitecoreTest\sitecore-test-tasks\Task 1 - Simple Figures\SimpleFigures\obj\Debug\net8.0\SimpleFigures.AssemblyInfo.cs
+c:\Kalindu\OheTestProjects\SitecoreTest\sitecore-test-tasks\Task 1 - Simple Figures\SimpleFigures\obj\Debug\net8.0\SimpleFigures.csproj.CoreCompileInputs.cache
+c:\Kalindu\OheTestProjects\SitecoreTest\sitecore-test-tasks\Task 1 - Simple Figures\SimpleFigures\obj\Debug\net8.0\SimpleFigures.sourcelink.json
+c:\Kalindu\OheTestProjects\SitecoreTest\sitecore-test-tasks\Task 1 - Simple Figures\SimpleFigures\obj\Debug\net8.0\SimpleFigures.dll
+c:\Kalindu\OheTestProjects\SitecoreTest\sitecore-test-tasks\Task 1 - Simple Figures\SimpleFigures\obj\Debug\net8.0\refint\SimpleFigures.dll
+c:\Kalindu\OheTestProjects\SitecoreTest\sitecore-test-tasks\Task 1 - Simple Figures\SimpleFigures\obj\Debug\net8.0\SimpleFigures.pdb
+c:\Kalindu\OheTestProjects\SitecoreTest\sitecore-test-tasks\Task 1 - Simple Figures\SimpleFigures\obj\Debug\net8.0\SimpleFigures.genruntimeconfig.cache
+c:\Kalindu\OheTestProjects\SitecoreTest\sitecore-test-tasks\Task 1 - Simple Figures\SimpleFigures\obj\Debug\net8.0\ref\SimpleFigures.dll
