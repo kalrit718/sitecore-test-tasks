@@ -1,47 +1,72 @@
-﻿using Minefield.Services;
+﻿using System.Text.RegularExpressions;
+using MinefieldGame.Models;
+using MinefieldGame.Services;
 
 int[][] minefieldMap = [
-  [0, 0, 1, 0],
-  [0, 0, 0, 0],
-  [1, 0, 0, 0],
-  [0, 1, 0, 0]
+  [1, 0, 1, 0, 1],
+  [1, 0, 0, 1, 0],
+  [0, 1, 0, 0, 1],
+  [0, 0, 1, 1, 0],
+  [1, 1, 0, 0, 0]
 ];
 
-// Implementing a 2D array with both Unique key and the flag about bombs.
-// Such as; 1  0   2  0   3  1   4 0	
-//          5  0   6  0   7  0   8 0	
-//          9  1   10 0   11 0	12 0	
-//          13 0	 14 1 	15 0	16 0	
+Minefield minefield = new Minefield(minefieldMap);
 
-KeyValuePair<int, int>[][] numberedMinefieldMap = new KeyValuePair<int, int>[minefieldMap.Length][];
-int number = 1;
+while (true) {
+  Console.WriteLine("\nMinefield Map: \n");
+  minefield.PrintMinefieldMap();
 
-for (int i = 0; i < minefieldMap.Length; i++)
-{
-  numberedMinefieldMap[i] = new KeyValuePair<int, int>[minefieldMap[i].Length];
-  for (int j = 0; j < minefieldMap[i].Length; j++)
-  {
-    numberedMinefieldMap[i][j] = new KeyValuePair<int, int>(number++, minefieldMap[i][j]);
+  Console.WriteLine("\nMinefield Map Coordinates: \n");
+  minefield.PrintMinefieldMapCoordinates();
+
+  Console.Write("\nEnter coordinates of the starting point (x, y): ");
+  string? startingCoordinatesStr = Console.ReadLine();
+  int[]? startingCoordinates;
+
+  Regex coordinatesReg = new Regex(@"\d+\s*,\s*\d+");
+
+  if (startingCoordinatesStr is not null && coordinatesReg.IsMatch(startingCoordinatesStr)) {
+    Match startingCoordinatesMatch = coordinatesReg.Match(startingCoordinatesStr);
+    startingCoordinates = startingCoordinatesMatch.Value
+                          .Split(char.Parse(","))
+                          .Select(number => Convert.ToInt32(number.Trim()))
+                          .ToArray();
   }
-}
-
-
-for (int i = 0; i < numberedMinefieldMap.Length; i++)
-{
-  for (int j = 0; j < numberedMinefieldMap[i].Length; j++)
-  {
-    Console.Write(numberedMinefieldMap[i][j].Key + " " + numberedMinefieldMap[i][j].Value + "\t");
+  else {
+    Console.Clear();
+    continue;
   }
-  Console.WriteLine();
-}
 
-int x = 1, y = 2;
-List<int> adjValues = AdjacentNumberService.GetAdjacentValues(numberedMinefieldMap, x, y);
+  Console.Write("\nEnter coordinates of the target point (x, y): ");
+  string? endingCoordinatesStr = Console.ReadLine();
+  int[]? endingCoordinates;
 
-Console.WriteLine();
+  if (endingCoordinatesStr is not null && coordinatesReg.IsMatch(endingCoordinatesStr)) {
+    Match endingCoordinatesMatch = coordinatesReg.Match(endingCoordinatesStr);
+    endingCoordinates = endingCoordinatesMatch.Value
+                          .Split(char.Parse(","))
+                          .Select(number => Convert.ToInt32(number.Trim()))
+                          .ToArray();
+  }
+  else {
+    Console.Clear();
+    continue;
+  }
 
-for (int i = 0; i < adjValues.Count; i++) 
-{
-  Console.Write(adjValues[i]);
-  Console.Write(" ");
+  List<Point> safePath = minefield.GetPath(
+    new Point(startingCoordinates[0], startingCoordinates[1]), 
+    new Point(endingCoordinates[0], endingCoordinates[1])
+  );
+
+  if (safePath.Count > 0) {
+    Console.WriteLine("\nSafe path to the target point: \n");
+    minefield.PrintMinefieldMap(safePath);
+  }
+  else {
+    Console.WriteLine("\nA safe path to the target point does not exist! \n");
+  }
+
+  Console.WriteLine("Press enter to play again...");
+  Console.ReadLine();
+  Console.Clear();
 }
