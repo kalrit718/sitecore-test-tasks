@@ -17,14 +17,6 @@ namespace MinefieldGame.Services
     // (0,4)  (1,4)	 (2,4)  (3,4) (4,4)	|
 
     // --------------- a ---------------
-
-    // public static List<Point> GetSafeAdjacentValues(KeyValuePair<Point, int>[][] refMatrix, Point refPoint)
-    // {
-    //   List<Point> allAdjacentValues = GetAdjacentValues(refMatrix, refPoint)
-    
-
-    //   return safeAdjacentValues;
-    // }
     
     public static List<Point> GetAdjacentValues(KeyValuePair<Point, int>[][] refMatrix, Point refPoint)
     {
