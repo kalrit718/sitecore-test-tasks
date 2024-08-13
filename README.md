@@ -12,5 +12,5 @@
 
 ## Task 3 - Minefield
 
-🔗 [Click here to navigate directly to the Logic Files (Not completed).](https://github.com/kalrit718/sitecore-test-tasks/tree/master/Task%203%20-%20Minefield/Minefield)<br>
+🔗 [Click here to navigate directly to the Logic Files.](https://github.com/kalrit718/sitecore-test-tasks/tree/master/Task%203%20-%20Minefield/Minefield)<br>
 🔗 [Click here to navigate directly to the use case example (program.cs file).](https://github.com/kalrit718/sitecore-test-tasks/blob/master/Task%203%20-%20Minefield/Minefield/Program.cs)
